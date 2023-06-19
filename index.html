@@ -4,8 +4,86 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <style>
+
+        </style>
+        <script>
+
+        </script>
     </head>
     <body>
-        
+        <script>
+            // Let's create JS object
+            /*
+            
+              There are two members of JS Object.
+              1.  Property:Value    (There are many properties)
+              2.  Function          (There are many Function)
+
+           (1). JS Object denoted by curly braces {}.
+           (2). JS Object can contain many information like name,surname,address,city,panno.
+           (3). JS Object can be stored in a variable.
+
+            */
+
+            var student1 = {};      //  Student1 is a type of JS object.
+            let student2 = '';      //  Student2 is a type of string. 
+            const student3 = 40;    //  Student3 is a type of number.
+
+            var student4 = {            // student4 is our object and property(fname,lname,...) are our members.
+                // 1. Property:value
+                fname:"Anita",
+                lname:"Dollor",
+                age:30,
+                salary:50000,
+                address:"Mumbai",
+                qualification:"B.Tech",
+
+                //  Function definition
+
+                getAddress() {
+                  //  Every function return something.
+                   return this.address;
+                }
+            }; 
+
+            let student5 = {            // student5 is our object and property(fname,lname,...) are our members.
+                fname:"Ragini",
+                salary:20000,
+                age:30,
+
+
+
+                /*
+                    "this" keyword is used to refer the internal js object (object(student4,student5...)
+                     k andar jo property(fname,lname,age,...)h unhe access krne k liye hm "this" keyword
+                      ka use krte h.ise aise likhte h(this.property means this.fname,this.age,......)).
+                */
+
+                // Function definition.
+
+                getMyFullAddress() {           // We write these function name without function keyword.
+                    console.log("Hello "+this.fname+" "+this.salary+' '+this.age);   // "this" is a reference to internal js object.
+                }
+                /*
+                    Here "this" keyword is used to refer internal js object (student5).
+                */
+
+            };
+
+            // How to access these information from JS Object.
+            /*    
+
+             I can access these information with the help of object.member.   
+
+            */
+            console.log(student4.fname);
+
+            console.log(student5.fname);
+
+            console.log(student5.getMyFullAddress());       // Function calling
+
+            console.log(student4.getAddress());             // Function calling
+        </script>
     </body>
 </html>
